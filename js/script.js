@@ -61,9 +61,8 @@ for (let i = 0; i < Events.length; i++){
     `
     <div class = 'event'>
         <img src = 'assets/${e.img}' alt = 'poster'>
-        <div class = 'expo'>
-            <h1> ${e.title }</h1>
-            <h2> ${e.date} </h2>
+        <div class = ''>
+          
         </div>
     </div>
     `
