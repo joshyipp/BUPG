@@ -1,6 +1,19 @@
 html {
   scroll-behavior: smooth;
 }
+.parallax {
+  /* The image used */
+  background-image: url("../assets/audience-2.jpg");
+
+  /* Set a specific height */
+  height:100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 body {
   font-family: 'Poppins', 'Manrope', sans-serif;
@@ -128,7 +141,7 @@ button:hover {
             filter: invert(70%);
   }
   #main {
-    margin-top: 80px;
+    
   }
   #splash {
     position: relative;
@@ -209,7 +222,8 @@ button:hover {
     padding: 2vw;
     margin-top: 60px;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(0, 0, 0, 0.88);
+    
   }
   .section .title {
     text-align: center;
