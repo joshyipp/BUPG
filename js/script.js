@@ -62,7 +62,7 @@ for (let i = 0; i < Events.length; i++){
     <div class = 'event'>
         <img src = 'assets/${e.img}' alt = 'poster'>
         <div class = ''>
-          
+       
         </div>
     </div>
     `
