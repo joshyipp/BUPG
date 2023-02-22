@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instafeed on Your Website</title>
+    <link href = 'css/style.css' rel = 'stylesheet'>
+	<style type="text/css">
+    
+    #instafeed {
+         /*Hover over image code*/
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear; 
+  transition: visibility 0s, opacity 0.5s linear;
+    }
+   
+
+     #instafeed-container img {
+    object-fit: cover;
+    width: 230px;
+  height: 230px;
+  
+  
+  
+}
+
+#instafeed-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+  max-width: 64rem;
+  margin: auto;
+}
+
+.content_img:hover div {
+    filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1);
+  transition: all ease 0.5s;
+
+  
+}
+/* Hover on Parent Container */
+.content_img{
+position: relative;
+overflow:hidden;
+}
+
+/* Child Text Container THE CAPTION TEXT BOX*/
+.content_img p {
+    visibility: hidden;
+}
+.content_img:hover div p {
+  position: absolute;
+text-align: center;
+  color: #fff;
+visibility: visible;
+  opacity: 1;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+/* Hover on Parent Container */
+.content_img:hover{
+    cursor: pointer;
+}
+
+
+	</style>
+    
+</head>
+<body>
+	<h1 style="text-align: center">Show Instagram Feed on your Website</h1>
+
+    	<div id="instafeed-container"></div>
+
+	<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+	<script type="text/javascript">
+	var userFeed = new Instafeed({
+		get: 'user',
+		target: "instafeed-container",
+    	resolution: 'low_resolution',
+        template:	'<div class="content_img"><div><a href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a><p>{{caption}}</p> </div></div>'
+        /*'<a href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a>'*/,
+		accessToken: 'IGQVJXX1JVY1ZANY19hVTRYYlZAUejZAlNThYR3AwUVpYT3lHVWpyUzFzWVBjdnk0amlLOGtNQWswNHJ6SjVObDc4a0pNR2tlUVd0UUl5eXNVYkRuOUNJOXJ6a2xzQ2F5TXFwbnBMNDg2ZAVZAfb1VnRVBicwZDZD',
+        
+    
+    });
+	userFeed.run();
+	</script>
+</body>
+</html>
