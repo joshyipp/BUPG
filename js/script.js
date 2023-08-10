@@ -147,6 +147,6 @@ var userFeed = new Instafeed({
   
     },
     template:	'<div class="insta slick-track"><a href="{{link}}" target="_blank"><img class="insta" title="{{caption}}" src="{{image}}" /></a></div>',
-    accessToken: 'IGQVJXR0xfWWg3MW9rTkdZAdHRfaExPR3RNUi12dmktWHN0VElTZAjdFSTlyV29tMERja2JpV3BrcDBOTGFUbGwtYkc1WDk2T2xkTTJzdVphNUI1OVFBbEFQYXZAITWFEcHJqUWtWdDdsbGhpT3BpbHV1VAZDZD',
+    accessToken: 'IGQVJVbXBpSHRhcmQzcGs5enY2T1F4MXJhMm5aTFNxdW1TaFU4Wm81ckx4M1dWaXQ3MkpkNGduaHhfcnFKSVZAHelV4ZA1p3V1hPT3J0dzYzc21fSHBtVGVzT2FIbXp0QkhzOUpwZAEtkSFZAQUlBuMUppWgZDZD',
   });
   userFeed.run();
