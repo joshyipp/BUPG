@@ -40,8 +40,14 @@ let Events = [
     */
     {
         title: 'XYZ',
-        img: 'terrier2.jpg',
-        date: '02-02-2023',
+        img: 'celticsgraphic-1.jpg',
+        date: '02-24-2023',
+        upcoming: true
+    },
+    {
+        title: 'XYZ',
+        img: 'BU_StuGov_Mixer_1.jpg',
+        date: '02-24-2023',
         upcoming: true
     },
 

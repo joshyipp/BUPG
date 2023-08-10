@@ -61,9 +61,6 @@ for (let i = 0; i < Events.length; i++){
     `
     <div class = 'event'>
         <img src = 'assets/${e.img}' alt = 'poster'>
-        <div class = ''>
-       
-        </div>
     </div>
     `
 
@@ -109,3 +106,47 @@ for (let i = 0; i < Class('navbtn').length; i++){
     nav.classList.toggle('active')
     }
 }
+
+var userFeed = new Instafeed({   
+    get: 'user',
+    target: "instafeed-container",
+    resolution: 'high_resolution',
+    https:true,
+    after: function() {
+      $(".regular").slick({
+            dots: false,
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            variableWidth: true,
+            responsive: [
+           
+            {
+            breakpoint: 911,
+            settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            
+            variableWidth: true
+    
+            }
+            },
+            {
+            breakpoint: 680,
+            settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '0vw',
+            variableWidth: true
+            
+            }
+             }
+            ],
+    });
+  
+    },
+    template:	'<div class="insta slick-track"><a href="{{link}}" target="_blank"><img class="insta" title="{{caption}}" src="{{image}}" /></a></div>',
+    accessToken: 'IGQVJXR0xfWWg3MW9rTkdZAdHRfaExPR3RNUi12dmktWHN0VElTZAjdFSTlyV29tMERja2JpV3BrcDBOTGFUbGwtYkc1WDk2T2xkTTJzdVphNUI1OVFBbEFQYXZAITWFEcHJqUWtWdDdsbGhpT3BpbHV1VAZDZD',
+  });
+  userFeed.run();
